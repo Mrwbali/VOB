@@ -1,5 +1,6 @@
 #include "World.h"
 #include <iostream>
+#include <iomanip>
 
 
 
@@ -21,9 +22,9 @@ World::~World()
 
 void World::getState()
 {	
-	cout << "Carrier" << charon.getPosition();
-	cout << goat.getSpecie()<< "   " << goat.getPosition();
-	cout << wolf.getSpecie() << "   " << wolf.getPosition();
-	cout << cabbage.getSpecie() << "   " << cabbage.getPosition();
+	cout << left << setw(8) << setfill(' ') << "Carrier" << charon.getPosition();
+	cout << left << setw(8) << setfill(' ') << goat.getSpecie() << goat.getPosition();
+	cout << left << setw(8) << setfill(' ') << wolf.getSpecie() << wolf.getPosition();
+	cout << left << setw(8) << setfill(' ') << cabbage.getSpecie() << cabbage.getPosition();
 	cin;
 }

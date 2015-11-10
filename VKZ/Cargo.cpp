@@ -5,11 +5,30 @@ Cargo::Cargo()
 {
 }
 
-Cargo::Cargo(SPECIE spec)
+Cargo::Cargo(SPECIE spec, POSITION position)
 {
 	setSpecie(spec);
-	setPosition(EAST);
+	setPosition(position);
 }
+
+string Cargo::getSpecie() const
+{
+	switch (aspec)
+	{
+	case Cargo::GOAT:
+		return "GOAT";
+		break;
+	case Cargo::WOLF:
+		return "WOLF";
+		break;
+	case Cargo::CABBAGE:
+		return "CABBAGE";
+		break;
+	default:
+		break;
+	}
+}
+	
 
 void Cargo::setSpecie(SPECIE spec)
 {

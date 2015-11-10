@@ -7,11 +7,11 @@ World::World()
 {	
 	this->charon = Charon(Charon::WEST);
 
-	this->goat = Cargo(Cargo::GOAT);
+	this->goat = Cargo(Cargo::GOAT, Charon::EAST);
 
-	this->wolf = Cargo(Cargo::WOLF);
+	this->wolf = Cargo(Cargo::WOLF, Charon::EAST);
 
-	this->cabbage = Cargo(Cargo::CABBAGE);
+	this->cabbage = Cargo(Cargo::CABBAGE, Charon::EAST);
 }
 
 
@@ -21,10 +21,9 @@ World::~World()
 
 void World::getState()
 {	
-	cout << charon.getPosition();
-	cout << goat.getPosition();
-	wolf.setPosition(Cargo::WEST);
-	cout << wolf.getPosition();
-	cout << cabbage.getPosition();
+	cout << "Carrier" << charon.getPosition();
+	cout << goat.getSpecie()<< "   " << goat.getPosition();
+	cout << wolf.getSpecie() << "   " << wolf.getPosition();
+	cout << cabbage.getSpecie() << "   " << cabbage.getPosition();
 	cin;
 }

@@ -26,8 +26,10 @@ public:
 	
 	Cargo();
 
-	Cargo(SPECIE spec);
+	Cargo(SPECIE spec, POSITION position);
 
+	string getSpecie() const;
+		
 	void setSpecie(SPECIE spec);
 	
 	string getPosition() const;

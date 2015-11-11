@@ -25,6 +25,7 @@ string Cargo::getSpecie() const
 		return "CABBAGE";
 		break;
 	default:
+		return to_string(aspec);
 		break;
 	}
 }
@@ -40,10 +41,10 @@ string Cargo::getPosition() const
 	switch (this->aposition)
 	{
 	case Charon::WEST:
-		return "WEST \n";
+		return "WEST";
 		break;
 	case Charon::EAST:
-		return "EAST \n";
+		return "EAST";
 		break;
 	default:
 		return to_string(aposition);

@@ -3,12 +3,17 @@
 
 #include "stdafx.h"
 #include "World.h"
+#include <iostream>
+
+
 
 
 int _tmain(int argc, _TCHAR* argv[])
-{
+{	
+
 	World world = World();
-	world.getState();
+	world.printState();
+	cout << world.getGameStatus();
 	return 0;
 }
 

@@ -1,10 +1,17 @@
 #pragma once
 #include <string>
 #include "Cargo.h"
+#include "Charon.h"
+#include "Rules.h"
+#include <vector>
+#include <iostream>
+#include <iomanip>
+
 using namespace std;
 
 class World
 {
+
 private:
 
 	Charon charon;
@@ -15,12 +22,22 @@ private:
 	
 	Cargo cabbage;
 
-public:
+	Rules rules;
 
-	void getState();
+	int gameStatus;
+	
+	vector<Cargo> cpositions;
+
+public:
 	
 	World();
-	
+
+	void printState() const;
+
+	int getGameStatus();
+
+	Charon::POSITION getCharonPosition() const;
+
 	virtual ~World();
 };
 

@@ -15,11 +15,17 @@ private:
 	POSITION aposition;
 
 public:
-	
-	string getPosition() const;
-	void setPosition(POSITION);
-	Charon(POSITION data);
+
 	Charon();
+
+	Charon(POSITION data);
+
+	string getPosition() const;
+
+	void setPosition(POSITION);
+
+	virtual void changePosition();
+
 	~Charon();
 };
 

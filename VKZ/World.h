@@ -38,6 +38,8 @@ public:
 
 	Charon::POSITION getCharonPosition() const;
 
+	bool sail(string);
+
 	virtual ~World();
 };
 

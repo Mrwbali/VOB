@@ -57,6 +57,14 @@ void Cargo::setPosition(POSITION pos)
 	this->aposition = pos;
 }
 
+void Cargo::changePosition()
+{
+	if (this->aposition == Charon::WEST)
+		this->setPosition(Charon::EAST);
+	else
+		this->setPosition(Charon::WEST);
+}
+
 Cargo::~Cargo()
 {
 }

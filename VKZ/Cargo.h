@@ -36,6 +36,8 @@ public:
 
 	void setPosition(POSITION pos);
 
+	virtual void changePosition();
+
 	~Cargo();
 };
 
